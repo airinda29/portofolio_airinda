@@ -1,11 +1,9 @@
 .jumbotron {
   padding-top: 6rem;
-  /* Mengubah background dari biru muda (#e2edff) menjadi pink pastel lembut */
   background-color: #ffe6eb;
 }
 
 #certificate {
-  /* Mengubah background section sertifikat menjadi pink pastel */
   background-color: #ffe6eb;
 }
 
@@ -45,4 +43,37 @@ section {
 .footer.bg-primary,
 footer.bg-primary {
   background-color: #d63384 !important;
+}
+
+/* =========================================================
+   PENGATURAN KLIK TOMBOL & SVG
+   ========================================================= */
+
+/* 1. Mencegah SVG menutupi klik ke tombol di sekitarnya */
+svg {
+  pointer-events: none;
+}
+
+/* 2. Memastikan tombol & kontainer jumbotron berada di lapisan atas */
+.jumbotron .container,
+.btn {
+  position: relative;
+  z-index: 5;
+}
+
+/* 3. Menjaga Header Modal & Badge di dalam Modal tetap bernuansa Pink (#d63384) */
+.modal-header.bg-primary {
+  background-color: #d63384 !important;
+}
+
+.modal .badge.bg-primary {
+  background-color: #d63384 !important;
+}
+
+.modal .text-primary {
+  color: #d63384 !important;
+}
+
+.modal .bi-check-circle-fill {
+  color: #d63384 !important;
 }
